@@ -46,6 +46,20 @@ class GroupsController < ApplicationController
     redirect_to groups_url, notice: 'Group was successfully destroyed.'
   end
 
+  def add_user 
+    user = User.find(params[:user_id])
+    @group = Group.find(params[:group_id])
+    @group.users << user 
+    redirect_to edit_group_path(@group)
+  end 
+
+  def remove_user
+    user = User.find(params[:user_id])
+    @group = Group.find(params[:group_id])
+    @group.users.delete(user)
+    redirect_to edit_group_path(@group)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_group

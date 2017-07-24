@@ -1,0 +1,7 @@
+<% User.all.each do |user| %>
+  <% unless user.groups.include?(@group) %>
+    <p> <%= user.email %> <%= link_to "Add",  group_add_path(@group, user), class: 'btn btn-primary'  %></p>
+  <% else %>
+    <p> <%= user.email %> <%= link_to "Remove",  group_remove_path(@group, user), class: 'btn btn-warning'  %></p>
+  <%end %>
+<% end %>
