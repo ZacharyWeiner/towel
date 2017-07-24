@@ -38,6 +38,12 @@ gem 'jquery-turbolinks'
 gem 'devise'
 gem 'petergate', '~> 1.6', '>= 1.6.3'
 
+#kaminari for pagenation 
+gem 'kaminari', '~> 1.0', '>= 1.0.1'
+
+#gritter for growl-notifications
+gem "gritter", "1.2.0"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
