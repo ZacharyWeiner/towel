@@ -35,6 +35,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'jquery-turbolinks'
+gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
