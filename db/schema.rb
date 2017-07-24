@@ -45,9 +45,11 @@ ActiveRecord::Schema.define(version: 20170724204455) do
     t.string "event_type"
     t.integer "status"
     t.integer "privacy"
+    t.bigint "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_events_on_city_id"
+    t.index ["group_id"], name: "index_events_on_group_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -93,4 +95,5 @@ ActiveRecord::Schema.define(version: 20170724204455) do
   add_foreign_key "cities", "countries"
   add_foreign_key "countries", "regions"
   add_foreign_key "events", "cities"
+  add_foreign_key "events", "groups"
 end

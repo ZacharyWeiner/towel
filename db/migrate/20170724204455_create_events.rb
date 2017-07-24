@@ -11,7 +11,8 @@ class CreateEvents < ActiveRecord::Migration[5.1]
       t.references :city, foreign_key: true
       t.string :event_type
       t.integer :status 
-      t.integer :privacy 
+      t.integer :privacy
+      t.references :group, foreign_key: true 
       t.timestamps
     end
   end
