@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Events</h1>
+<%= link_to 'New Event', new_event_path %>
+<% @events.each do |event| %>
+<div class='row'>
+  <div class='col-md-1'>
+    <%= event.date.to_time.strftime('%B %e') %><br/>
+    Location: <%= event.city.name %>
+  </div>
+  <div class='col-md-2'>
+    
+    starts: <%= event.start_time.strftime("%I:%M%p") %><br/>
+    ends: <%= event.start_time.strftime("%I:%M%p") %><br/>
+    
+    </div>
+  <div class='col-md-3'>
+    <%= event.title %><br>
+    <%= event.description %><br>
+  </div>
+  <div class='col-md-3'>
+    Cost: <%= event.cost %><br/>
+    Capacity: <%= event.capacity %>
+    
+  </div>
+  <div class='col-md-3'>
+    <%= link_to 'Show', event %>
+    <%= link_to 'Edit', edit_event_path(event) %>
+    <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+</div>
+<% end %>
+<br>
+
+

@@ -49,4 +49,17 @@ libertatem.users << zack
 libertatem.users << trabka
 libertatem.users << andrea
 
+#Locations 
+puts 'Start Building Locations'
+asia = Region.create!(name: 'Asia')
+thailand = Country.create!(name: 'Thailand', region: asia)
+bangkok = City.create!(name: 'Bangkok', country: thailand)
+puts 'End Building Locations'
+
+puts 'Building Events'
+welcome = Event.create!(title: 'Welcome Event', date: Date.today + 10.days, start_time: Time.now, description: 'First Welcome Event', cost: 0.00, capacity: 100, city: bangkok, event_type:'Group')
+travel = Event.create!(title: 'Transit to City 2', date: Date.today + 30.days, start_time: Time.now, description: 'First Transit to Event', cost: 0.00, capacity: 100, city: bangkok, event_type:'Travel')
+
+travel = Event.create!(title: 'Transit to City 2', date: Date.today + 30.days, start_time: Time.now, description: 'First Transit to Event', cost: 0.00, capacity: 100, city: bangkok, event_type:'Travel')  
+puts 'End Building Events'
 

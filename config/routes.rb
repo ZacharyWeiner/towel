@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :events
+  resources :cities
+  resources :countries
+  resources :regions
   resources :groups do 
     get 'add_user/:user_id', to: 'groups#add_user', as: "add"
     get 'remove_user/:user_id', to: 'groups#remove_user', as: "remove"
