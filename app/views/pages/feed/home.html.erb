@@ -5,6 +5,6 @@
   </div>
 </div>
 <div class='row'>
-  
+  <%= render 'shared/super_admin/super_admin_controls' if logged_in?(:company_admin) %>
 </div>
-<div class='row'></div>
+<div class='row'></div> 

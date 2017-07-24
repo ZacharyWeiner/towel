@@ -1,3 +1,4 @@
+<div class='container'> 
 <%= form_with(model: group, local: true) do |form| %>
 <% if group.errors.any? %>
 <div id="error_explanation">
@@ -29,7 +30,11 @@
     </div>
   </div>
   <div class="col-md-6">
-    <%= render 'shared/controls/user_groups_control', locals: {group: @group}%>
+    <% if  @group.id.nil? %>
+      <div> Save the group to add members </div>
+    <% else %>
+       <%=  render 'shared/controls/user_groups_control', locals: {group: @group} %>
+    <% end %>
   </div>
 </div> 
 
@@ -38,3 +43,4 @@
   <%= form.submit class: 'btn btn-primary' %>
 </div>
 <% end %>
+</div>
