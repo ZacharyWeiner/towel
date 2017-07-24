@@ -36,15 +36,17 @@ gem 'jquery-ui-rails'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'jquery-turbolinks'
 gem 'devise'
+#petergate for auth
 gem 'petergate', '~> 1.6', '>= 1.6.3'
-
 #kaminari for pagenation 
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
-
 #gritter for growl-notifications
 gem "gritter", "1.2.0"
-
+#hide environment variables 
 gem 'dotenv-rails', groups: [:development, :test]
+#upload images 
+gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-aws'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
