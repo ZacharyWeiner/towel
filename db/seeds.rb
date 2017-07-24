@@ -26,6 +26,18 @@ jo = User.create!(email: "jose@ry.com", password: 'password')
 jo.roles = [:city_admin]
 jo.save
 
+zack = User.create!(email:'zack@ry.com', password: 'password')
+zack.roles = [:member]
+zack.save
+
+trabka = User.create!(email:'trabka@ry.com', password: 'password')
+trabka.roles = [:member]
+trabka.save
+
+andrea = User.create!(email:'andrea@ry.com', password: 'password')
+andrea.roles = [:member]
+andrea.save
+
 libertatem = Group.create!(name: 'Libertatem', description: 'Starting Sept 2016 End Aug 2017')
 
 libertatem.users << paulina
@@ -33,4 +45,8 @@ libertatem.users << westy
 libertatem.users << alexandra
 libertatem.users << coti
 libertatem.users << jo
+libertatem.users << zack
+libertatem.users << trabka
+libertatem.users << andrea
+
 
