@@ -44,6 +44,7 @@ gem 'kaminari', '~> 1.0', '>= 1.0.1'
 #gritter for growl-notifications
 gem "gritter", "1.2.0"
 
+gem 'dotenv-rails', groups: [:development, :test]
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
